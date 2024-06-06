@@ -8,12 +8,13 @@ class Stack:
         self.typ = typ
 
     def push(self, item):
-        if isinstance(type, type(self.typ)) is False:
-            if isinstance(item, type(self.typ)) is False:
-                raise TypeError
-        else:
-            if isinstance(item, self.typ) is False:
-                raise TypeError
+        if self.typ is not None:
+            if isinstance(type, type(self.typ)) == False:
+                if isinstance(item , type(self.typ)) == False:
+                    raise TypeError
+            else:
+                if isinstance(item , self.typ) == False:
+                    raise TypeError
         self.items.insert(0, item)
 
     def pop(self):
